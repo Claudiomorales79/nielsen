@@ -1,0 +1,208 @@
+[
+  {
+    "id": "c577d4aa-da36-4696-9962-9031d2b15173",
+    "createdAt": "2026-03-01T03:09:40.850Z",
+    "updatedAt": "2026-03-01T03:10:10.242Z",
+    "auditName": "google",
+    "author": "claudio",
+    "sourceType": "url",
+    "sourceValue": "https://cabanaslagomaihue.cl/",
+    "imageDataUrl": "",
+    "status": "Analizada",
+    "heuristics": [
+      {
+        "id": "255bd816-1c93-4703-9718-4321ddccb0e2",
+        "index": 0,
+        "name": "Visibilidad del estado del sistema",
+        "score": 49,
+        "severity": "bad",
+        "suggestion": "Prioridad alta de corrección en \"Visibilidad del estado del sistema\", reforzando feedback visible durante acciones y cambios del sistema, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "84297efa-f1e0-4c00-8b80-766c66279020",
+        "index": 1,
+        "name": "Relación entre el sistema y el mundo real",
+        "score": 59,
+        "severity": "bad",
+        "suggestion": "Prioridad alta de corrección en \"Relación entre el sistema y el mundo real\", acercando el lenguaje a conceptos del negocio y del usuario final, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "e02f78d7-c7a1-42ad-8d92-7473818e58b3",
+        "index": 2,
+        "name": "Control y libertad del usuario",
+        "score": 70,
+        "severity": "warn",
+        "suggestion": "Refinar antes de la siguiente iteración en \"Control y libertad del usuario\", habilitando salida, deshacer o reversibilidad en puntos de fricción, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "4b2f9816-2abf-4b31-9d07-20eed0d49aa2",
+        "index": 3,
+        "name": "Consistencia y estándares",
+        "score": 80,
+        "severity": "good",
+        "suggestion": "Mantener y documentar el patrón actual en \"Consistencia y estándares\", alineando nomenclatura, componentes y patrones ya conocidos, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "bbbd415e-3514-4f0b-9a25-14175579e843",
+        "index": 4,
+        "name": "Prevención de errores",
+        "score": 91,
+        "severity": "good",
+        "suggestion": "Mantener y documentar el patrón actual en \"Prevención de errores\", reduciendo riesgos antes de que el usuario ejecute acciones irreversibles, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "ba5055ac-adb5-47c5-bd97-1cbed3bf55ba",
+        "index": 5,
+        "name": "Reconocimiento antes que recuerdo",
+        "score": 39,
+        "severity": "bad",
+        "suggestion": "Prioridad alta de corrección en \"Reconocimiento antes que recuerdo\", exponiendo opciones frecuentes sin obligar a memorizar pasos previos, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "5c9efe93-5073-43ea-9dcf-5c0f2a058d16",
+        "index": 6,
+        "name": "Flexibilidad y eficiencia de uso",
+        "score": 49,
+        "severity": "bad",
+        "suggestion": "Prioridad alta de corrección en \"Flexibilidad y eficiencia de uso\", agilizando tareas repetitivas para perfiles expertos y atajos, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "b711575c-a480-4599-8abb-90d4b5c6b741",
+        "index": 7,
+        "name": "Diseño estético y minimalista",
+        "score": 60,
+        "severity": "warn",
+        "suggestion": "Refinar antes de la siguiente iteración en \"Diseño estético y minimalista\", eliminando ruido visual para priorizar decisiones clave, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "1d3cee9c-a97f-451e-b46d-6d03d0f98a49",
+        "index": 8,
+        "name": "Ayuda para reconocer, diagnosticar y recuperarse de errores",
+        "score": 70,
+        "severity": "warn",
+        "suggestion": "Refinar antes de la siguiente iteración en \"Ayuda para reconocer, diagnosticar y recuperarse de errores\", haciendo que los errores expliquen causa, impacto y recuperación, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "713e4b0b-556c-4b02-b39e-79177150bb18",
+        "index": 9,
+        "name": "Ayuda y documentación",
+        "score": 81,
+        "severity": "good",
+        "suggestion": "Mantener y documentar el patrón actual en \"Ayuda y documentación\", ofreciendo ayuda útil, corta y contextual cuando la interfaz no alcanza, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "b736f2d4-d3bf-48fd-b4dd-f728a399659c",
+    "createdAt": "2026-03-01T03:08:20.460Z",
+    "updatedAt": "2026-03-01T03:08:20.460Z",
+    "auditName": "Auditoría web",
+    "author": "Equipo UX",
+    "sourceType": "url",
+    "sourceValue": "https://www.hospitalsanfranciscodepucon.cl/",
+    "imageDataUrl": "",
+    "status": "Analizada",
+    "heuristics": [
+      {
+        "id": "adcb264a-149b-4616-9fef-33869c29c2ab",
+        "index": 0,
+        "name": "Visibilidad del estado del sistema",
+        "score": 51,
+        "severity": "bad",
+        "suggestion": "Prioridad alta de corrección en \"Visibilidad del estado del sistema\", reforzando feedback visible durante acciones y cambios del sistema, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "72327217-b5b0-4c54-8fd9-f3570600f2c5",
+        "index": 1,
+        "name": "Relación entre el sistema y el mundo real",
+        "score": 62,
+        "severity": "warn",
+        "suggestion": "Refinar antes de la siguiente iteración en \"Relación entre el sistema y el mundo real\", acercando el lenguaje a conceptos del negocio y del usuario final, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "037df70b-abe9-4293-b76d-778a39104ea1",
+        "index": 2,
+        "name": "Control y libertad del usuario",
+        "score": 72,
+        "severity": "warn",
+        "suggestion": "Refinar antes de la siguiente iteración en \"Control y libertad del usuario\", habilitando salida, deshacer o reversibilidad en puntos de fricción, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "e6e12661-5167-4511-893f-22800ba2a18d",
+        "index": 3,
+        "name": "Consistencia y estándares",
+        "score": 83,
+        "severity": "good",
+        "suggestion": "Mantener y documentar el patrón actual en \"Consistencia y estándares\", alineando nomenclatura, componentes y patrones ya conocidos, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "005fa6e3-47d3-4457-8df2-b32e78be2ee1",
+        "index": 4,
+        "name": "Prevención de errores",
+        "score": 93,
+        "severity": "good",
+        "suggestion": "Mantener y documentar el patrón actual en \"Prevención de errores\", reduciendo riesgos antes de que el usuario ejecute acciones irreversibles, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "b0b3943f-1c18-4ea0-b330-491d50bc9abb",
+        "index": 5,
+        "name": "Reconocimiento antes que recuerdo",
+        "score": 41,
+        "severity": "bad",
+        "suggestion": "Prioridad alta de corrección en \"Reconocimiento antes que recuerdo\", exponiendo opciones frecuentes sin obligar a memorizar pasos previos, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "67afdbb8-a3f1-436c-9829-386c45aa94ab",
+        "index": 6,
+        "name": "Flexibilidad y eficiencia de uso",
+        "score": 52,
+        "severity": "bad",
+        "suggestion": "Prioridad alta de corrección en \"Flexibilidad y eficiencia de uso\", agilizando tareas repetitivas para perfiles expertos y atajos, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "66a15e34-c4ac-4345-836f-f929db300ab2",
+        "index": 7,
+        "name": "Diseño estético y minimalista",
+        "score": 62,
+        "severity": "warn",
+        "suggestion": "Refinar antes de la siguiente iteración en \"Diseño estético y minimalista\", eliminando ruido visual para priorizar decisiones clave, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "a3bcf97d-9cdb-4af7-b354-7e04cf828251",
+        "index": 8,
+        "name": "Ayuda para reconocer, diagnosticar y recuperarse de errores",
+        "score": 73,
+        "severity": "warn",
+        "suggestion": "Refinar antes de la siguiente iteración en \"Ayuda para reconocer, diagnosticar y recuperarse de errores\", haciendo que los errores expliquen causa, impacto y recuperación, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      },
+      {
+        "id": "db47369f-4a16-475e-a384-ce40adc86391",
+        "index": 9,
+        "name": "Ayuda y documentación",
+        "score": 83,
+        "severity": "good",
+        "suggestion": "Mantener y documentar el patrón actual en \"Ayuda y documentación\", ofreciendo ayuda útil, corta y contextual cuando la interfaz no alcanza, validando flujos críticos reales y consistencia entre pantallas.",
+        "note": ""
+      }
+    ]
+  }
+]

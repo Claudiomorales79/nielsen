@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heuristic Evaluator Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+
+    <div id="loginGate" class="gate-shell">
+      <section class="gate-card">
+        <p class="eyebrow">Nielsen Automático</p>
+        <h1>Heuristic Evaluator Dashboard</h1>
+        <p class="gate-copy">
+          Acceso restringido para el equipo UX. Introduce la contraseña compartida
+          para abrir el panel de auditoría.
+        </p>
+        <form id="loginForm" class="gate-form">
+          <label for="passwordInput">Contraseña compartida</label>
+          <div class="password-row">
+            <input
+              id="passwordInput"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              placeholder="••••••••••"
+              required
+            />
+            <button type="submit" class="primary">Entrar</button>
+          </div>
+          <p id="loginFeedback" class="feedback" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+
+    <main id="appShell" class="app-shell hidden">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Dashboard UX Interno</p>
+          <h1>Auditoría heurística con señal inmediata y trazabilidad editable.</h1>
+          <p class="hero-text">
+            Evalúa URLs o imágenes contra las 10 heurísticas de Nielsen, añade
+            contexto humano y exporta entregables listos para PDF.
+          </p>
+        </div>
+        <div class="hero-meta">
+          <div class="metric-panel">
+            <span class="metric-label">Auditorías guardadas</span>
+            <strong id="savedCount">0</strong>
+          </div>
+          <div class="metric-panel">
+            <span class="metric-label">Tiempo objetivo IA</span>
+            <strong>&lt; 15 s</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="top-grid">
+        <section class="panel ingest-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Entrada</p>
+              <h2>Nuevo análisis</h2>
+            </div>
+            <button id="newAuditBtn" class="ghost" type="button">Nueva auditoría</button>
+          </div>
+
+          <div class="field-grid">
+            <label class="field">
+              <span>Nombre de auditoría</span>
+              <input id="auditName" type="text" placeholder="Ej. Checkout ecommerce Q1" />
+            </label>
+
+            <label class="field">
+              <span>Autor</span>
+              <input id="auditAuthor" type="text" placeholder="Equipo UX" />
+            </label>
+          </div>
+
+          <div class="input-switch" role="tablist" aria-label="Tipo de input">
+            <button id="urlModeBtn" class="switch-btn active" type="button">URL</button>
+            <button id="imageModeBtn" class="switch-btn" type="button">Imagen</button>
+          </div>
+
+          <div id="urlInputGroup" class="input-group">
+            <label class="field">
+              <span>URL pública</span>
+              <input
+                id="urlInput"
+                type="url"
+                placeholder="https://www.ejemplo.com"
+                inputmode="url"
+              />
+            </label>
+          </div>
+
+          <div id="imageInputGroup" class="input-group hidden">
+            <label class="upload-shell" for="imageInput">
+              <input id="imageInput" type="file" accept="image/*" />
+              <span class="upload-title">Subir captura o interfaz</span>
+              <span class="upload-copy">PNG, JPG o WebP. Se usa como evidencia visual en la auditoría.</span>
+            </label>
+            <div id="imagePreviewWrap" class="image-preview hidden">
+              <img id="imagePreview" alt="Vista previa del input cargado" />
+            </div>
+          </div>
+
+          <div class="action-row">
+            <button id="analyzeBtn" class="primary wide" type="button">Analizar input</button>
+            <button id="saveAuditBtn" class="secondary" type="button">Guardar cambios</button>
+            <button id="exportPdfBtn" class="ghost" type="button">Exportar PDF</button>
+          </div>
+
+          <p id="statusMessage" class="status-banner" aria-live="polite">
+            Introduce una URL o sube una imagen para iniciar el análisis.
+          </p>
+        </section>
+
+        <section class="panel summary-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Resumen</p>
+              <h2>Señal global</h2>
+            </div>
+            <span id="auditStatePill" class="state-pill">Sin analizar</span>
+          </div>
+
+          <div class="score-cluster">
+            <div class="dial">
+              <span id="overallScore">0</span>
+            </div>
+            <div class="summary-copy">
+              <p id="summaryHeadline">No hay resultados todavía.</p>
+              <p id="summaryBody">
+                El motor heurístico generará un score promedio, riesgos clave y una
+                lectura rápida para priorizar acciones.
+              </p>
+            </div>
+          </div>
+
+          <div id="riskStrip" class="risk-strip"></div>
+        </section>
+      </section>
+
+      <section class="panel heuristics-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Diagnóstico</p>
+            <h2>Las 10 heurísticas de Nielsen</h2>
+          </div>
+          <span class="section-note">Notas con autoguardado al editar</span>
+        </div>
+        <div id="heuristicsGrid" class="heuristics-grid"></div>
+      </section>
+
+      <section class="panel history-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Historial</p>
+            <h2>Auditorías guardadas</h2>
+          </div>
+          <button id="deleteAuditBtn" class="danger" type="button">Eliminar seleccionada</button>
+        </div>
+
+        <div class="history-toolbar">
+          <label class="field compact">
+            <span>Buscar</span>
+            <input id="searchInput" type="text" placeholder="Fecha, URL, nombre o autor" />
+          </label>
+        </div>
+
+        <div id="historyList" class="history-list"></div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
