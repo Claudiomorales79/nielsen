@@ -18,13 +18,13 @@ Aplicación web sin dependencias externas con backend Node incluido.
 
 1. Ejecuta `node server.js`.
 2. Abre `http://127.0.0.1:3000`.
-3. Inicia sesión con la contraseña compartida.
+3. Inicia sesión con cualquier contraseña (modo abierto temporal).
 
 ## Variables de entorno
 
 - `PORT`: puerto del servidor (por defecto `3000`).
 - `HOST`: host del servidor (por defecto `127.0.0.1`).
-- `NIELSEN_SHARED_PASSWORD`: contraseña compartida (por defecto `Nielsen2026`).
+- `NIELSEN_SHARED_PASSWORD`: configurada pero actualmente no se valida en el login temporal abierto.
 - `OPENAI_API_KEY`: habilita análisis externo si está presente.
 - `OPENAI_MODEL`: modelo del proveedor externo.
 

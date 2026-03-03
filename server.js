@@ -52,9 +52,6 @@ async function route(req, res) {
 
   if (req.method === "POST" && pathname === "/api/login") {
     const body = await readJsonBody(req);
-    if (body.password !== SHARED_PASSWORD) {
-      return sendJson(res, 401, { error: "Contraseña incorrecta." });
-    }
     const token = crypto.randomBytes(24).toString("hex");
     sessions.set(token, { createdAt: Date.now() });
     setSessionCookie(res, token);

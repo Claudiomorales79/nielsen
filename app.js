@@ -24,6 +24,8 @@ const els = {
   appShell: document.getElementById("appShell"),
   loginForm: document.getElementById("loginForm"),
   passwordInput: document.getElementById("passwordInput"),
+  togglePasswordBtn: document.getElementById("togglePasswordBtn"),
+  togglePasswordIcon: document.getElementById("togglePasswordIcon"),
   loginFeedback: document.getElementById("loginFeedback"),
   auditName: document.getElementById("auditName"),
   auditAuthor: document.getElementById("auditAuthor"),
@@ -73,6 +75,7 @@ async function init() {
 
 function bindEvents() {
   els.loginForm.addEventListener("submit", handleLogin);
+  els.togglePasswordBtn.addEventListener("click", togglePasswordVisibility);
   els.urlModeBtn.addEventListener("click", () => switchMode("url"));
   els.imageModeBtn.addEventListener("click", () => switchMode("image"));
   els.imageInput.addEventListener("change", handleImageUpload);
@@ -99,6 +102,17 @@ async function handleLogin(event) {
   } catch (error) {
     els.loginFeedback.textContent = error.message || "No se pudo iniciar sesión.";
   }
+}
+
+function togglePasswordVisibility() {
+  const reveal = els.passwordInput.type === "password";
+  els.passwordInput.type = reveal ? "text" : "password";
+  els.togglePasswordBtn.setAttribute("aria-pressed", String(reveal));
+  els.togglePasswordBtn.setAttribute(
+    "aria-label",
+    reveal ? "Ocultar contraseña" : "Mostrar contraseña"
+  );
+  els.togglePasswordIcon.textContent = reveal ? "Ocultar" : "Mostrar";
 }
 
 function unlockApp() {

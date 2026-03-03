@@ -140,6 +140,37 @@ button {
   align-items: stretch;
 }
 
+.password-field {
+  position: relative;
+  flex: 1;
+}
+
+.password-field input {
+  padding-right: 6rem;
+}
+
+.eye-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  padding: 0.45rem 0.8rem;
+  border-radius: 12px;
+  background: rgba(38, 30, 22, 0.08);
+  color: var(--ink);
+  border: 1px solid rgba(21, 18, 13, 0.08);
+  box-shadow: none;
+}
+
+.eye-toggle:hover {
+  transform: translateY(-50%);
+  background: rgba(188, 75, 47, 0.1);
+}
+
+.eye-toggle:active {
+  transform: translateY(-50%);
+}
+
 input,
 textarea {
   width: 100%;

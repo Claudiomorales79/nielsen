@@ -14,20 +14,31 @@
         <p class="eyebrow">Nielsen Automático</p>
         <h1>Heuristic Evaluator Dashboard</h1>
         <p class="gate-copy">
-          Acceso restringido para el equipo UX. Introduce la contraseña compartida
-          para abrir el panel de auditoría.
+          Acceso temporalmente abierto. Introduce cualquier contraseña para abrir
+          el panel de auditoría.
         </p>
         <form id="loginForm" class="gate-form">
-          <label for="passwordInput">Contraseña compartida</label>
+          <label for="passwordInput">Contraseña de acceso</label>
           <div class="password-row">
-            <input
-              id="passwordInput"
-              name="password"
-              type="password"
-              autocomplete="current-password"
-              placeholder="••••••••••"
-              required
-            />
+            <div class="password-field">
+              <input
+                id="passwordInput"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="••••••••••"
+                required
+              />
+              <button
+                id="togglePasswordBtn"
+                class="eye-toggle"
+                type="button"
+                aria-label="Mostrar contraseña"
+                aria-pressed="false"
+              >
+                <span id="togglePasswordIcon" aria-hidden="true">Mostrar</span>
+              </button>
+            </div>
             <button type="submit" class="primary">Entrar</button>
           </div>
           <p id="loginFeedback" class="feedback" aria-live="polite"></p>
