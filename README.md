@@ -5,6 +5,7 @@ Aplicación web sin dependencias externas con backend Node incluido.
 ## Qué incluye
 
 - Backend HTTP propio en `server.js`.
+- Función serverless compatible con Vercel en `api/[...path].js`.
 - Acceso por contraseña compartida gestionado en servidor.
 - Sesión por cookie `HttpOnly`.
 - Historial persistido en `data/audits.json`.
@@ -33,3 +34,4 @@ Aplicación web sin dependencias externas con backend Node incluido.
 - La integración con proveedor externo está implementada como mejor esfuerzo y usa `https://api.openai.com/v1/responses`.
 - Si el proveedor externo falla o no está configurado, el backend usa el motor heurístico local.
 - La exportación a PDF sigue dependiendo del diálogo de impresión del navegador, pero el informe se genera ya desde el servidor y no desde el estado local del cliente.
+- En Vercel, el historial usa memoria del runtime y `/tmp`; sirve para prototipo, pero no garantiza persistencia duradera entre reinicios o nuevas instancias.

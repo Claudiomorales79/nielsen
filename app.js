@@ -69,7 +69,7 @@ async function init() {
     }
   } catch {
     renderLockedState();
-    announce("No se pudo conectar con el backend. Arranca el servidor Node para usar el dashboard.", true);
+    announce("No se pudo conectar con el backend del prototipo. Verifica el despliegue o el servidor local.", true);
   }
 }
 
